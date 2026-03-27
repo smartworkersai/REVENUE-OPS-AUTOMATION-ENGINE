@@ -31,3 +31,6 @@ logs/
 *.sqlite
 *.db-shm
 *.db-wal
+MASTER_STATUS.md
+HISTORY.md
+CLAUDE.md
