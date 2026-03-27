@@ -1,0 +1,50 @@
+search:
+  keywords:
+    # Tech/Data Moat
+    - 'CRM analyst'
+    - 'marketing data analyst'
+    - 'marketing operations'
+    - 'performance marketing executive'
+    - 'growth associate'
+    # Financial/Commercial Moat
+    - 'commercial marketing analyst'
+    - 'investor relations analyst'
+    - 'client reporting analyst'
+    - 'product marketing associate'
+    - 'B2B marketing analyst'
+    # Broad Finance Sweeps
+    - 'fintech marketing'
+    - 'financial services marketing'
+    # Insurance fallback
+    - 'digital marketing executive'
+  location: 'London'
+  max_per_source: 150
+  days_since_posted: 7
+
+scoring:
+  min_score: 7.5
+  max_to_score_per_run: 20     # cap KPI API calls per run; remaining SCORED jobs carry over
+  lead_advantage_boost: null   # updated weekly by learn.py
+
+sources:
+  linkedin: true
+  indeed: true
+  glassdoor: true
+  efinancialcareers: true
+  reed: true
+  totaljobs: true
+  direct_sites:
+    - name: Canary Wharf Group
+      url: https://www.canarywharf.com/about/careers
+    - name: CISI
+      url: https://www.cisi.org/cisiweb2/cisi-website/careers
+    - name: UBS
+      url: https://jobs.ubs.com/TGnewUI/Search/Home/Home?partnerid=25008
+    - name: Schroders
+      url: https://www.schroders.com/en-gb/uk/individual/careers/
+    - name: London Stock Exchange Group
+      url: https://lseg.wd3.myworkdayjobs.com/LSEG_Careers
+
+schedule:
+  pipeline_every_hours: 6
+  learn_every_days: 7

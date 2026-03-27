@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @page { margin: 18mm 20mm; size: A4; }
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10.5pt;
+      color: #1a1a1a;
+      line-height: 1.45;
+    }
+
+    /* Header */
+    .header { border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 10px; }
+    .name    { font-size: 20pt; font-weight: 700; letter-spacing: 0.5px; margin: 0; }
+    .contact { font-size: 9pt; color: #444; margin-top: 3px; }
+
+    /* Section headings */
+    h2 {
+      font-size: 10pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #1a1a1a;
+      margin: 12px 0 5px 0;
+      padding-bottom: 2px;
+    }
+
+    /* Experience block */
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2px;
+    }
+    .exp-title   { font-weight: 700; }
+    .exp-company { font-style: italic; color: #333; }
+    .exp-date    { font-size: 9.5pt; color: #555; white-space: nowrap; }
+
+    ul {
+      margin: 3px 0 8px 0;
+      padding-left: 16px;
+    }
+    li { margin-bottom: 2px; }
+
+    /* Education */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+    .edu-degree { font-weight: 700; }
+    .edu-detail { font-size: 9.5pt; color: #333; }
+
+    /* Keep each job block together across page breaks */
+    .exp-block {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<div class="header">
+  <p class="name">Omokolade Sobande</p>
+  <p class="contact">
+    omokoladesobande@gmail.com &nbsp;·&nbsp; +44 7310 552174 &nbsp;·&nbsp;
+    London, United Kingdom &nbsp;·&nbsp; Right to work: Yes
+  </p>
+</div>
+
+<!-- ===== EXPERIENCE ===== -->
+<h2>Experience</h2>
+
+<!-- CISI -->
+<div class="exp-block">
+<div class="exp-header">
+  <span><span class="exp-title">Marketing Intern</span> &nbsp;·&nbsp; <span class="exp-company">CISI (Chartered Institute for Securities &amp; Investment)</span></span>
+  <span class="exp-date">2025 · London</span>
+</div>
+<ul>
+  {% if 'CISI' in bullets and bullets['CISI'] %}
+    {% for bullet in bullets['CISI'] %}
+      <li>{{ bullet }}</li>
+    {% endfor %}
+  {% else %}
+    <li>Managed communications with 10+ senior stakeholders and external contributors for 3 high-profile industry events, ensuring accurate messaging and timely delivery under tight deadlines.</li>
+    <li>Led development of internal newsletter features reaching 300+ staff members, translating organisational updates into clear, engaging content that strengthened internal communication and brand alignment.</li>
+    <li>Drove content optimization through social media performance analysis, identifying engagement trends that improved audience interaction.</li>
+    <li>Delivered demographic insights on Gen Z and Millennial segments (18-35) that refined campaign positioning across 3 digital channels.</li>
+    <li>Led cross-departmental alignment across 4 departments, coordinating delivery of 3 major marketing campaigns.</li>
+  {% endif %}
+</ul>
+</div>
+
+<!-- Todlr -->
+<div class="exp-block">
+<div class="exp-header">
+  <span><span class="exp-title">Brand Development Associate</span> &nbsp;·&nbsp; <span class="exp-company">Todlr</span></span>
+  <span class="exp-date">2023 · Remote (Part-time)</span>
+</div>
+<ul>
+  {% if 'Todlr' in bullets and bullets['Todlr'] %}
+    {% for bullet in bullets['Todlr'] %}
+      <li>{{ bullet }}</li>
+    {% endfor %}
+  {% else %}
+    <li>Defined brand positioning and messaging across 5 digital channels, strengthening market differentiation in the financial education sector.</li>
+    <li>Developed and managed strategic partnerships, contributing to increased brand credibility and visibility within the financial education sector.</li>
+    <li>Generated strategic insights through market research and competitive analysis (surveys, focus groups, industry reports) that informed marketing strategy and audience targeting.</li>
+    <li>Optimized campaign performance through user behaviour analysis (Google Analytics, CRM data), driving a 27% increase in user acquisition.</li>
+  {% endif %}
+</ul>
+</div>
+
+<!-- Evolve -->
+<div class="exp-block">
+<div class="exp-header">
+  <span><span class="exp-title">Customer Experience Associate</span> &nbsp;·&nbsp; <span class="exp-company">Evolve</span></span>
+  <span class="exp-date">2021 · London</span>
+</div>
+<ul>
+  {% if 'Evolve' in bullets and bullets['Evolve'] %}
+    {% for bullet in bullets['Evolve'] %}
+      <li>{{ bullet }}</li>
+    {% endfor %}
+  {% else %}
+    <li>Resolved 95% of complaints and inquiries within 24 hours across individual and corporate customer segments.</li>
+    <li>Delivered seamless event execution for an average of 60+ events per quarter, managing guest check-ins, facility preparation, and event coordination.</li>
+    <li>Maintained 90%+ guest satisfaction score through proactive service recovery and personalized hospitality.</li>
+  {% endif %}
+</ul>
+</div>
+
+<!-- Deloitte -->
+<div class="exp-block">
+<div class="exp-header">
+  <span><span class="exp-title">Audit Intern</span> &nbsp;·&nbsp; <span class="exp-company">Deloitte</span></span>
+  <span class="exp-date">2019 · Lagos</span>
+</div>
+<ul>
+  {% if 'Deloitte' in bullets and bullets['Deloitte'] %}
+    {% for bullet in bullets['Deloitte'] %}
+      <li>{{ bullet }}</li>
+    {% endfor %}
+  {% else %}
+    <li>Executed interim audit procedures and analytical reviews for commercial banking clients alongside senior audit team members.</li>
+    <li>Improved audit testing accuracy and efficiency by analyzing financial datasets using ACL Analytics and Excel.</li>
+    <li>Reviewed financial transactions and prepared audit documentation applying IFRS standards to ensure compliance and consistency.</li>
+  {% endif %}
+</ul>
+</div>
+
+<!-- Airtel -->
+<div class="exp-block">
+<div class="exp-header">
+  <span><span class="exp-title">Sales &amp; Marketing Intern</span> &nbsp;·&nbsp; <span class="exp-company">Airtel Networks Ltd</span></span>
+  <span class="exp-date">2018 · Lagos</span>
+</div>
+<ul>
+  {% if 'Airtel' in bullets and bullets['Airtel'] %}
+    {% for bullet in bullets['Airtel'] %}
+      <li>{{ bullet }}</li>
+    {% endfor %}
+  {% else %}
+    <li>Processed 250+ online sales orders while maintaining sales records and supporting account management for channel partners.</li>
+    <li>Streamlined purchasing and delivery processes through digital transaction verification, improving accuracy and efficiency.</li>
+    <li>Delivered financial performance reports that enabled faster decision-making and improved reporting accuracy by 24%.</li>
+  {% endif %}
+</ul>
+</div>
+
+<!-- ===== EDUCATION ===== -->
+<h2>Education</h2>
+
+<div class="edu-row">
+  <div>
+    <div class="edu-degree">MSc Innovation and Entrepreneurship</div>
+    <div class="edu-detail">University of Warwick (WMG) &nbsp;·&nbsp; Coventry, UK</div>
+    <div class="edu-detail" style="font-size:9pt;color:#555;">
+      Core modules: Project &amp; Operations Management · Digital Marketing Strategy · Business Analytics ·
+      Digital Transformation · Product Development · Entrepreneurial Finance &amp; Financial Analysis
+    </div>
+  </div>
+</div>
+
+<div class="edu-row" style="margin-top:6px;">
+  <div>
+    <div class="edu-degree">BSc Accounting &nbsp;<span style="font-weight:400;">(Second Class Upper / 2:1)</span></div>
+    <div class="edu-detail">Covenant University &nbsp;·&nbsp; Ogun, Nigeria</div>
+  </div>
+</div>
+
+<!-- ===== ACHIEVEMENTS ===== -->
+<h2>Achievements</h2>
+<div class="edu-row">
+  <span class="edu-degree">Cohort Leader, MSc Innovation and Entrepreneurship, WMG</span>
+  <span class="exp-date">2025 · Coventry, UK</span>
+</div>
+<div class="edu-row" style="margin-top:4px;">
+  <span class="edu-degree">Diploma in Leadership Development</span>
+  <span class="exp-date">2021 · Ogun, Nigeria</span>
+</div>
+
+<!-- ===== SKILLS ===== -->
+<h2>Skills &amp; Certifications</h2>
+<p style="margin:2px 0 1px 0;"><strong>Technical:</strong>
+  Google Analytics &nbsp;·&nbsp; Advanced Excel (financial modeling, pivot tables) &nbsp;·&nbsp;
+  Figma &nbsp;·&nbsp; ACL Analytics &nbsp;·&nbsp; CRM platforms &nbsp;·&nbsp; Data visualization
+</p>
+<p style="margin:2px 0 6px 0;"><strong>Marketing &amp; Business:</strong>
+  Digital marketing strategy &nbsp;·&nbsp; Social media analytics &nbsp;·&nbsp; Market research &nbsp;·&nbsp;
+  Competitive analysis &nbsp;·&nbsp; Stakeholder management &nbsp;·&nbsp; Campaign optimization
+</p>
+<p style="margin:2px 0 6px 0;"><strong>Certifications:</strong>
+  Ethical Artificial Intelligence — CISI (2025) &nbsp;·&nbsp;
+  CIM Certificate in Professional Marketing (in view) &nbsp;·&nbsp;
+  Member, Chartered Institute for Securities &amp; Investment (CISI)
+</p>
+
+<!-- ===== EXTRACURRICULAR ===== -->
+<h2>Extracurricular Activities</h2>
+<ul>
+  <li><strong>Warwick AI Society:</strong> Developed predictive models and NLP applications through hands-on AI projects. Participated in data science and machine learning workshops.</li>
+  <li><strong>Warwick Enterprise Society:</strong> Competed in startup pitch competitions, presenting business ideas to industry experts. Applied business planning and market analysis skills from entrepreneurship workshops to develop viable business models.</li>
+  <li><strong>Donate.NG:</strong> Supported Nigerian healthcare initiatives through regular contributions and awareness campaigns reaching underprivileged communities.</li>
+</ul>
+
+</body>
+</html>

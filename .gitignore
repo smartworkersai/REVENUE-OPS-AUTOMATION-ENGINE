@@ -1,0 +1,33 @@
+# Secrets
+.env
+secrets/
+*.json
+
+# Output
+output/
+*.lock
+*.pid
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+*.db-shm
+*.db-wal
